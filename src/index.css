@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-navy: #020617;
+  --color-navy-light: #0f172a;
+  --color-gold: #C5A028;
+  --color-gold-light: #E5C158;
+  --color-gold-dark: #8E7016;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-200 bg-navy selection:bg-gold/30;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-white;
+  }
+}
+
+.glass-card {
+  @apply bg-slate-900/40 backdrop-blur-2xl border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)];
+}
+
+.premium-shadow {
+  @apply shadow-[0_30px_60px_rgba(0,0,0,0.5)];
+}
+
+.btn-gold {
+  @apply bg-gold hover:bg-gold-dark text-navy font-black py-4 px-10 rounded-full transition-all duration-500 shadow-lg hover:shadow-gold/20 transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-2 uppercase tracking-tighter;
+}
+
+.btn-outline {
+  @apply border-2 border-white/10 hover:border-gold text-white font-bold py-4 px-10 rounded-full transition-all duration-500 backdrop-blur-sm hover:bg-gold hover:text-navy flex items-center justify-center gap-2 uppercase tracking-tighter;
+}
+
+.section-title {
+  @apply text-5xl md:text-8xl font-bold mb-8 text-white leading-[0.95] tracking-tighter;
+}
+
+.section-subtitle {
+  @apply text-gold font-black uppercase tracking-[0.4em] text-xs mb-6 block;
+}
+
+.input-premium {
+  @apply w-full px-8 py-5 bg-white/5 rounded-2xl border border-white/10 focus:border-gold focus:ring-4 focus:ring-gold/10 transition-all outline-none text-white font-medium placeholder:text-slate-500 backdrop-blur-md;
+}
+
+.luxury-gradient {
+  @apply bg-gradient-to-br from-navy via-navy-light to-navy;
+}
+
+.card-content-fix {
+  @apply break-words overflow-hidden max-w-full;
+}

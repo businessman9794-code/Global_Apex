@@ -1,0 +1,7 @@
+{
+  "name": "Global Apex Logistics",
+  "description": "A professional, global parcel and logistics company providing secure, fast, and reliable freight services worldwide.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
